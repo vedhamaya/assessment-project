@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report</title>
+</head>
+<body>
+    <h1>Hub: {{ hub }}</h1>
+    <h2>Supplier: {{ supplier }} - {{ supplier_name }}</h2>
+
+    <h3>SKU Summary</h3>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>SKU</th>
+                <th>Description</th>
+                <th>Standard Crate Quantity</th>
+                <th>Procured Quantity</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in sku_summary %}
+            <tr>
+                <td>{{ item.sku }}</td>
+                <td>{{ item.description }}</td>
+                <td>{{ item.standard_crate_quantity }}</td>
+                <td>{{ item.procured_quantity }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <h3>Crate List</h3>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Crate</th>
+                <th>SKU</th>
+                <th>Packed Quantity</th>
+                <th>Crate Weight</th>
+                <th>Is Final Crate</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for crate in crate_list %}
+            <tr>
+                <td>{{ crate.crate }}</td>
+                <td>{{ crate.sku }}</td>
+                <td>{{ crate.packed_quantity }}</td>
+                <td>{{ crate.crate_weight }}</td>
+                <td>{{ crate.is_final_crate }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

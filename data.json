@@ -1,0 +1,29 @@
+{
+    "hub": "BCCBP001",
+    "supplier": "37367",
+    "supplier_name": "Sunil N Bitter",
+    "sku_summary": [
+        {
+            "sku": "10000298",
+            "description": "Mango Banganapalli 1 kg",
+            "standard_crate_quantity": 18000,
+            "procured_quantity": 36100
+        }
+    ],
+    "crate_list": [
+        {
+            "crate": "3e8a1075b4",
+            "sku": "10000298",
+            "packed_quantity": 1800,
+            "crate_weight": 18,
+            "is_final_crate": true
+        },
+        {
+            "crate": "2c7eba0234e",
+            "sku": "10000298",
+            "packed_quantity": 1800,
+            "crate_weight": 18,
+            "is_final_crate": false
+        }
+    ]
+}
